@@ -55,7 +55,6 @@ After=sound.target pipewire.target jack.target
 
 [Service]
 Type=simple
-User=tu_usuario
 ExecStart=/usr/local/bin/smk25ii_bridge
 Restart=always
 RestartSec=2
