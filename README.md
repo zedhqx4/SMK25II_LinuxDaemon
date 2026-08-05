@@ -1,4 +1,4 @@
-# SMK25II Bluetooth MIDI Bridge & Mackie Control Translator
+# M-VAVE SMK25II Bluetooth MIDI Bridge & Mackie Control Translator
 
 A robust, bidirectional ALSA sequencer daemon written in C designed to bridge, translate, and route MIDI streams between a physical Bluetooth keyboard (specifically tailored for devices like the SMK25II) and a DAW (Digital Audio Workstation) under Linux (compatible with PipeWire/JACK via ALSA sequencer architecture).
 
