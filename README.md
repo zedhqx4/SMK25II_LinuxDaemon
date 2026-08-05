@@ -39,8 +39,8 @@ To run the bridge automatically in the background as a persistent system service
 1.Copy the binary to a system path:
 
 ```
-sudo cp smk25ii_bridge /usr/local/bin/
-sudo chmod +x /usr/local/bin/smk25ii_bridge
+sudo cp smk25ii_bridge /usr/bin/
+sudo chmod +x /usr/bin/smk25ii_bridge
 ```
 2.Create the systemd service file:2
 ```
@@ -55,7 +55,7 @@ After=sound.target pipewire.target jack.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/smk25ii_bridge
+ExecStart=/usr/bin/smk25ii_bridge
 Restart=always
 RestartSec=2
 
