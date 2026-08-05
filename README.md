@@ -75,3 +75,6 @@ Managing the Daemon
 * **View live logs: journalctl -u smk25ii-bridge.service -f
 
 * **Stop service: sudo systemctl stop smk25ii-bridge.service
+
+## NOTES
+The comments in the source and my variables names are in spanish XD I tried to make the source as easy to follow as possible
