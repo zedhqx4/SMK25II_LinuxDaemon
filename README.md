@@ -70,11 +70,11 @@ sudo systemctl enable smk25ii-bridge.service
 sudo systemctl start smk25ii-bridge.service
 ```
 Managing the Daemon
-* **Check status: sudo systemctl status smk25ii-bridge.service
+* Check status: sudo systemctl status smk25ii-bridge.service
 
-* **View live logs: journalctl -u smk25ii-bridge.service -f
+* View live logs: journalctl -u smk25ii-bridge.service -f
 
-* **Stop service: sudo systemctl stop smk25ii-bridge.service
+* Stop service: sudo systemctl stop smk25ii-bridge.service
 
 ## How to use it in practice (DAW Setup)
 I've tested it on Ardour, Reaper, and Bitwig.
@@ -93,11 +93,11 @@ Presets: Every factory preset works out of the box (except Preset 8 for GarageBa
 
 It should autoconnect properly but in case it doesnt, this is the setup
 
--HW_Input Goes to the output node of the SMK25II
--SMK25ii-bt-> Midi notes go into the regular midi input node of the DAW
--SMK25ii-bt-DAW (Input) connects to the DAW output to RECEIVE MCP/MCU feedback (PAD LIGHTS!!!)
--SMK25ii-bt-DAW (output) connects to the DAW input to SEND MCP/MCU commands
--HW_Output_MCP Goes into the SMK25II Input note of the SMK25II
+* HW_Input Goes to the output node of the SMK25II.
+* SMK25ii-bt-> Midi notes go into the regular midi input node of the DAW.
+* SMK25ii-bt-DAW (Input) connects to the DAW output to RECEIVE MCP/MCU feedback (PAD LIGHTS!!!).
+* SMK25ii-bt-DAW (output) connects to the DAW input to SEND MCP/MCU commands.
+* HW_Output_MCP Goes into the SMK25II Input note of the SMK25II.
 
 ## NOTES
 
