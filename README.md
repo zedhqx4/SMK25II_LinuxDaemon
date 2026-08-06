@@ -26,7 +26,7 @@ gcc -O3 smk25ii_bridge.c -lasound -o smk25ii_bridge
 ```
 
 
-## Usage
+## Running the Daemon
 Run the compiled daemon directly from your terminal:
 ```
 ./smk25ii_bridge
@@ -75,6 +75,29 @@ Managing the Daemon
 * **View live logs: journalctl -u smk25ii-bridge.service -f
 
 * **Stop service: sudo systemctl stop smk25ii-bridge.service
+
+## How to use it in practice (DAW Setup)
+I've tested it on Ardour, Reaper, and Bitwig.
+
+For Ardour & Reaper: They handle device ports natively without needing extra virtual ports. You can just select the daemon's ports directly in your control surface settings.
+
+For Bitwig: Since it can be a bit picky, you might want to load a virtual MIDI module first (e.g: sudo modprobe snd_virmidi midi_devs=4), add the controller as a Mackie MCU Pro, and route the daemon's output (SMK25ii-bt-DAW <> to the virtual port (e.g., VirMIDI 4-0 in my setup).
+
+## Feedback & Notes:
+
+Full Feedback: Once routed correctly, you get full feedback response—meaning the keyboard's lights and LEDs will respond to what's happening in your DAW.
+
+Regular Notes: If you just want to play regular MIDI notes, connect SMK25ii-bt port directly to your DAW's standard MIDI input port.
+
+Presets: Every factory preset works out of the box (except Preset 8 for GarageBand, and Preset 7 for Reason, which has different mapping i cant test outside linux).
+
+It should autoconnect properly but in case it doesnt, this is the setup
+
+-HW_Input Goes to the output node of the SMK25II
+-SMK25ii-bt-> Midi notes go into the regular midi input node of the DAW
+-SMK25ii-bt-DAW (Input) connects to the DAW output to RECEIVE MCP/MCU feedback (PAD LIGHTS!!!)
+-SMK25ii-bt-DAW (output) connects to the DAW input to SEND MCP/MCU commands
+-HW_Output_MCP Goes into the SMK25II Input note of the SMK25II
 
 ## NOTES
 
